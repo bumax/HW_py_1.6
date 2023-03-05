@@ -12,7 +12,7 @@ print(list_n)
 
 # Без рекурсии:
 # for i in range(len(list_n)):
-#     if min  < list_n[i] < max :
+#     if min  <= list_n[i] <= max :
 #         print(f"Элемент с индексом {i} и значением {list_n[i]} находится в границе диапазона")
 
 # С рекурсией:
@@ -20,7 +20,7 @@ print(list_n)
 
 def is_in_range(lst, min, max, i=0):
     if len(lst) > 0:
-        if min < lst.pop(0) < max:
+        if min <= lst.pop(0) <= max:
             print(f"Элемент с индексом {i} находится в границе диапазона!")
         i += 1
         is_in_range(lst, min, max, i)
